@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.component.clock {
+  text-align: center;
+  .time {
+    font-size: 100px;
+    font-weight: bold;
+  }
+}
