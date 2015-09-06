@@ -1,18 +1,82 @@
+@import "bourbon";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1em;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, html {
+  height: 100%;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   text-rendering: optimizeLegibility;
+  & > .ember-view {
+    height: 100%;
+    @include display(flex);
+    @include flex-direction(column);
+    @include flex-wrap(nowrap);
+    @include flex-grow(1);
+  }
+}
+
+header, main, footer {
+  display: block;
+  width: 100%;
+}
+
+header, footer {
+  @include flex(0 0 75px);
+
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(nowrap);
+  @include flex-grow(1);
+  .left {
+    @include flex(0 0 400px);
+  }
+  .center {
+    @include flex(1 1 100%);
+  }
+  .right {
+    @include flex(0 0 400px);
+  }
+}
+
+header {
+}
+
+main {
+  @include flex(1 1 100%);
+
+  @include display(flex);
+  @include flex-direction(column);
+  @include flex-wrap(nowrap);
+  @include align-items(center);
+  @include align-content(center);
+  @include justify-content(center);
+}
+
+footer {
 }
 
 .component.clock {
   text-align: center;
   .time {
-    font-size: 100px;
-    font-weight: bold;
+    font-size: 150px;
+    font-weight: normal;
+    letter-spacing: -0.025em;
+    margin-bottom: 25px;
+  }
+  .greeting {
+    font-size: 50px;
+    letter-spacing: -0.025em;
   }
 }

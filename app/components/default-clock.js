@@ -9,14 +9,14 @@ export default Ember.Component.extend({
 
   formattedTime: function() {
     // TODO support 12h format
-    let output = new moment().format('HH:mm');
+    let output = new moment().format('H:mm');
 
     return output;
   }.property(),
 
   formattedGreeting: function() {
     // TODO use name from config
-    return `${this.get('greeting')}, Râu!` ;
+    return `${this.get('greeting')}, Râu.` ;
   }.property('greeting'),
 
   greeting: function() {
