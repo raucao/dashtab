@@ -18,6 +18,7 @@ body, html {
 body {
   font-family: "Helvetica Neue", sans-serif;
   text-rendering: optimizeLegibility;
+  color: #fff;
   & > .ember-view {
     height: 100%;
     @include display(flex);
@@ -51,6 +52,7 @@ header, footer {
 }
 
 header {
+  z-index: 1;
 }
 
 main {
@@ -62,9 +64,23 @@ main {
   @include align-items(center);
   @include align-content(center);
   @include justify-content(center);
+
+  z-index: 1;
 }
 
 footer {
+  z-index: 1;
+}
+
+.component.background-image {
+  .image {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .component.clock {
