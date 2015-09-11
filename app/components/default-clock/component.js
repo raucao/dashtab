@@ -16,7 +16,7 @@ export default Ember.Component.extend({
 
   formattedGreeting: function() {
     // TODO use name from config
-    return `${this.get('greeting')}, Râu.` ;
+    return `${this.get('greeting')}, ${this.get('name')}.` ;
   }.property('greeting'),
 
   greeting: function() {

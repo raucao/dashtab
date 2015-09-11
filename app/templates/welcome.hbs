@@ -1,0 +1,11 @@
+<section id="welcome" class="settings">
+  <p>
+    What&rsquo;s your name?
+  </p>
+  <p>
+    {{input type="text" value=model.name action="persistModel"}}
+  </p>
+  <p>
+    <button {{action "persistModel"}}>Next</button>
+  </p>
+</section>

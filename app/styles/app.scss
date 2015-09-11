@@ -72,6 +72,44 @@ footer {
   z-index: 1;
 }
 
+#welcome {
+  text-align: center;
+  font-size: 50px;
+  p {
+    margin-bottom: 50px;
+  }
+  input {
+    width: 500px;
+    padding: 25px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 50px;
+    transition: all 0.1s linear;
+    &:hover, &:focus {
+      background: rgba(255,255,255,0.1);
+    }
+  }
+  button {
+    padding: 10px 25px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    // text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 25px;
+    transition: all 0.1s linear;
+    border-radius: 25px;
+    text-transform: uppercase;
+    &:hover, &:focus {
+      background: rgba(255,255,255,0.1);
+    }
+  }
+}
+
 .component.background-image {
   .image {
     z-index: 0;
