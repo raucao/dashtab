@@ -2,21 +2,26 @@ import Ember from 'ember';
 import moment from 'moment';
 
 export default Ember.Component.extend({
-  // TODO update time regularly
 
   classNames: ['component', 'clock'],
   timeFormat: '24h',
+  time: new moment(),
+
+  tick() {
+    let self = this;
+    this.set('time', new moment());
+    setTimeout(function(){ self.tick(); }, 2000);
+  },
 
   formattedTime: function() {
     // TODO support 12h format
     let output = new moment().format('H:mm');
 
     return output;
-  }.property(),
+  }.property('time'),
 
   formattedGreeting: function() {
-    // TODO use name from config
-    return `${this.get('greeting')}, ${this.get('name')}.` ;
+    return `${this.get('greeting')}, ${this.get('name')}.`;
   }.property('greeting'),
 
   greeting: function() {
@@ -32,5 +37,9 @@ export default Ember.Component.extend({
 
     return greeting;
   }.property(),
+
+  startClock: function() {
+    this.tick();
+  }.on('init')
 
 });
