@@ -10,7 +10,7 @@ export default Ember.Component.extend({
   },
 
   loadBackgroundImage: function() {
-    let imgSrc = '/img/arizona.jpg';
+    let imgSrc = '/img/adelboden.jpg';
     let imgEl  = document.createElement('img');
 
     imgEl.onload = () => {
