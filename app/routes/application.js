@@ -23,7 +23,6 @@ export default Ember.Route.extend({
   actions: {
 
     goToNameConfig() {
-      console.log('app route action');
       this.transitionTo('welcome');
     }
 
