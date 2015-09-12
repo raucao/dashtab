@@ -18,6 +18,15 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       settings: client.getObject('settings.json')
     });
+  },
+
+  actions: {
+
+    goToNameConfig() {
+      console.log('app route action');
+      this.transitionTo('welcome');
+    }
+
   }
 
 });

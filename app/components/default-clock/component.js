@@ -20,10 +20,6 @@ export default Ember.Component.extend({
     return output;
   }.property('time'),
 
-  formattedGreeting: function() {
-    return `${this.get('greeting')}, ${this.get('name')}.`;
-  }.property('greeting'),
-
   greeting: function() {
     let greeting;
 
@@ -40,6 +36,15 @@ export default Ember.Component.extend({
 
   startClock: function() {
     this.tick();
-  }.on('init')
+  }.on('init'),
+
+
+  actions: {
+
+    goToNameConfig() {
+      this.sendAction('goToNameConfig');
+    }
+
+  }
 
 });
